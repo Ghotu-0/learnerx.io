@@ -1,15 +1,15 @@
 {
-"Scripts":[
+"scripts":[
 
  {"name":"scriptStr.js","type":"file","discription":"Contains all methods for scripts structure"}
 
  ],
-"Styles":[
+"stylesheet":[
 
     {"name":"StructureStyles.css","type":"file","discription":"Contains style sheet for Str html file"}
    
 ],
-"Structure":[
+"structure":[
 
     {"name":"mainStr.html","type":"file","discription":"Contains structure html file"}
    

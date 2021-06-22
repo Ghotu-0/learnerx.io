@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <style>
+        .defaultTable{
+            border:1px solid black;
+            border-spacing: 0px;
+        }
+
+        .defaultTable td,th {
+        border: 1px solid black;
+        text-align: center; 
+        padding:10px;
+     
+        }
+
+        .defaultHead{
+            font-size: large;
+            font-weight: bolder;
+    
+        }
+
+        .defaultHead td{
+             background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        
+    </style>
+
+<table>
+    <tr><td>hello3</td><td>hello2</td><td>hello1</td><td>hello0</td></tr>
+</table>
+</body>
+<script type="module">
+let scripts=[
+
+{name:"scriptStr.js",type:"file",discription:"Contains all methods for scripts structure"},
+{name:"scriptStr2.js",type:"file2",discription:"Contains all methods for scripts structure2"},
+{name:"scriptStr3.js",type:"file3",discription:"Contains all methods for scripts structure3"}
+
+]
+
+import {Table} from "../scripts/creative/Table.js"
+
+let Tab=new Table(document.getElementsByTagName('body')[0]);
+
+//Tab.createEmpty(5,4,"");
+Tab.createWithArray(scripts);
+Tab.appendTable();
+
+
+</script>
+</html>

@@ -1,0 +1,24 @@
+{
+"scripts":[
+
+ {"Name":"scriptStr.js","Type":"file","Discription":"Contains all methods for scripts structure"},
+ {"name":"creative","type":"folder","discription":"Creative Libraries"},
+ {"name":"Table.js","type":"file","discription":"Contains all methods for drawing Html Tables"}
+
+
+ ],
+"stylesheet":[
+
+    {"Name":"StructureStyles.css","Type":"file","Discription":"Contains style sheet for Str html file"}
+   
+],
+"structure":[
+
+    {"Name":"mainStr.html","Type":"file","Discription":"Contains structure html file"},
+    {"Name":"tableExample.html","Type":"file","Discription":"Contains tested examples of Table.js"}
+
+   
+]
+
+
+}

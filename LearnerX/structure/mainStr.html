@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Structure - LearnerX</title>
+    <link rel="stylesheet" href="../stylesheet/StructureStyles.css">
+</head>
+<body class="mainPage">
+
+    <style>
+        .defaultTable{
+            margin: auto;
+            border:1px solid black ;
+            border-spacing: 0px;
+        }
+
+        .defaultTable td,th {
+        border: 1px solid black;
+        text-align: center; 
+        padding:10px;
+     
+        }
+
+        .defaultHead{
+            font-size: large;
+            font-weight: bolder;
+    
+        }
+
+        .defaultHead td{
+             background-color: rgba(0, 0, 0, 0.2);
+             font-size: medium;
+        }
+
+        
+    </style>
+
+
+    <div class="mainHeader">
+        LearnerX / Application Structure
+    </div>
+
+    <div class="mainContainer" id="tableContainer">
+    <div style="margin: auto; padding:1%;">
+        <label for="records">Choose</label>
+       <select name="" id="records">
+         
+       </select>
+    </div>
+
+    </div>
+
+    <script type="module">
+
+        import {ScriptStructure} from "../scripts/Structure.js";
+        import {Table} from "../scripts/creative/Table.js";
+
+        let selected="";
+        let trx=new ScriptStructure;
+        let objJson=await trx.log();
+
+        
+        let selecto=document.getElementById('records');
+
+
+        for (let l = 0; l < Object.keys(objJson).length; l++) {
+           
+        selecto.innerHTML+="<option value="+Object.keys(objJson)[l]+">"+Object.keys(objJson)[l]+"</option>"
+            
+        }
+
+
+        selecto.onchange=function(e){
+
+        if(document.getElementsByClassName('defaultTable')[0]){
+
+            document.getElementsByClassName('defaultTable')[0].remove();
+
+        }
+
+        selected=e.target.value;
+
+
+    if (selected) {
+        let Tab=new Table(document.getElementById('tableContainer'));
+        Tab.createWithArray(objJson[selected]);
+        Tab.appendTable();
+    }
+
+    
+
+}
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+:root{
+    --X_navHeight:50px;
+    --X_navColor:white;
+    --X_mainHeight:0px;
+    --X_winHeight:0px;
+    --X_sideColor:white;
+    --X_navShadow:0 0 2px #00000080;
+    --X_navSidePadd:5px;
+    --XnavButtonColor:#606060;
+    --XnavButtActBgColor:#f5f5db99;
+    --XsideBarButtColor:#606060;
+    --XnavButtActBoxShColor:#00000099;
+    --X_mainColor:beige;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+
+.X_mainLight{
+    width:100%;
+    height:var(--X_mainHeight);
+    background-color:var(--X_mainColor);
+}
+
+.X_navLight{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:var(--X_navColor);
+    height:calc(var(--X_navHeight));
+    padding:var(--X_navSidePadd);
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow:var(--X_navShadow);
+}
+
+.X_tempSide{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    left:0;
+    width:fit-content;
+    height:var(--X_winHeight);
+    background-color:var(--X_sideColor);
+    float: left;
+    padding:0;
+    z-index: 1;
+}
+
+.X_navMain{
+    width: 100%;
+    margin:0;
+    padding:0;
+    position: relative;
+    float: right;
+}
+
+.X_tempLogo{
+    text-align: center!important;
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 70%);
+    font-weight: 600!important;
+    font-variant-caps: small-caps;
+    font-family: monospace;
+    font-size:x-large!important;
+    color: slategrey!important;
+    letter-spacing: 2px;
+}
+
+.X_navButtons{
+    float: right;
+    color:var(--XnavButtonColor) !important;
+}
+
+.X_navleft{
+    float: left;   
+    width: 50%;
+}
+
+.X_sideButton{
+    color:var(--XsideBarButtColor) !important;
+}
+
+.X_navright{
+float: right;    
+width: 50%;
+}
+
+.X_barContain{
+    height:var(--X_navHeight);
+    display: flex;
+}
+
+.X_navButtons > i{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    transition:box-shadow .8s , background-color .2s;
+    background-color:transparent;
+}
+
+
+.X_navButtons:active > i{
+    
+    box-shadow:0px 0px 2px var(--XnavButtActBoxShColor);
+    background-color:var(--XnavButtActBgColor);
+    border-radius: 100%;
+    transition:box-shadow 0s , background-color 0s;
+}
+

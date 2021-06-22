@@ -30,7 +30,16 @@
              background-color: rgba(0, 0, 0, 0.2);
         }
 
-        
+        .defaultSideCol{
+            background-color: rgba(0, 0, 0, 0.2);
+            font-size: large;
+            font-weight: bolder;
+        }
+
+ 
+        .tableHigh{
+            background-color: #eeff008c;
+        }
     </style>
 
 <table>
@@ -40,20 +49,28 @@
 <script type="module">
 let scripts=[
 
-{name:"scriptStr.js",type:"file",discription:"Contains all methods for scripts structure"},
-{name:"scriptStr2.js",type:"file2",discription:"Contains all methods for scripts structure2"},
-{name:"scriptStr3.js",type:"file3",discription:"Contains all methods for scripts structure3"}
-
+{name:"scriptStr.js",type:"1",discription:"Contains all methods for scripts structure"},
+{name:"scriptStr2.js",type:"2",discription:"Contains all methods for scripts structure2"},
+{name:"scriptStr3.js",type:"2",discription:"Contains all methods for scripts structure3"},
+{name:"scriptStr4.js",type:"3",discription:"null"}
 ]
+
+let siderow=['(A)','(B)','(C)','(D)'];
 
 import {Table} from "../scripts/creative/Table.js"
 
 let Tab=new Table(document.getElementsByTagName('body')[0]);
 
+ 
 //Tab.createEmpty(5,4,"");
-Tab.createWithArray(scripts);
+
+Tab.createWithArray(scripts,true,siderow);
+
+console.log(Tab.median(Tab.analyze(2)));
+
 Tab.appendTable();
 
+ 
 
 </script>
 </html>

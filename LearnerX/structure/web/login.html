@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LearnerX</title>
+    <link rel="stylesheet" href="/LearnerX/stylesheet/login.css">
+    <link rel="stylesheet" href="/LearnerX/prism/prismo/prism.css">
+
+    <link rel="stylesheet" href="/LearnerX/boots/css/bootstrap.min.css">
+    <script src="/LearnerX/scripts/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/LearnerX/boots/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a8fd4decff.js" crossorigin="anonymous"></script>
+    <script src="/LearnerX/prism/prismo/prism.js"></script>
+</head>
+<body style="display:flex;">
+    <div class="X_tempSide">
+    <div class="X_barContain m-0 p-0">
+       <div class="btn mx-2 my-auto X_sideButton" style="border-radius: 100%;"><i class="fas fa-bars"></i></div>
+    </div>
+    </div>
+
+<div class="X_navMain m-0 p-0">
+     <div class="X_navLight">
+    <div class="X_navleft">
+        <div class="btn mx-2 my-0 X_tempLogo p-0" >LearnerX</div>
+    </div>
+    <div class="X_navright">
+        <div class="btn mx-1 my-0 px-0 X_navButtons"><i class="fa fa-cog" aria-hidden="true"></i></div>
+        <div class="btn mx-1 my-0 px-0 X_navButtons"><i class="fa fa-home" aria-hidden="true"></i></div>
+    </div>
+    </div>
+    
+    <div class="X_mainLight">
+    y
+    </div>
+</div>
+    
+</body>
+<script>
+
+
+ const rootStyle=window.getComputedStyle(document.body);
+
+ window.addEventListener("load",setInitial);
+ window.addEventListener("pageshow",setInitial);
+ window.addEventListener("resize",setInitial);
+
+function setInitial(){
+
+ let navBar=document.getElementsByClassName('X_navLight')[0];
+ let sideBar=document.getElementsByClassName('X_tempSide')[0];
+ let barButton=document.getElementsByClassName('X_barContain')[0];
+ 
+ let navPadding=parseFloat(rootStyle.getPropertyValue('--X_navSidePadd'))*2;
+ 
+ document.documentElement.style.setProperty("--X_mainHeight",window.innerHeight-navBar.offsetHeight+"px");//offsetHeight not work with height:auto;
+ document.documentElement.style.setProperty("--X_winHeight",window.innerHeight+"px");
+
+ 
+}
+</script>
+
+</html>

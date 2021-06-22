@@ -7,7 +7,7 @@
     <title>Main Structure - LearnerX</title>
     <link rel="stylesheet" href="../stylesheet/StructureStyles.css">
 </head>
-<body class="mainPage">
+<body style="background-color: #e9e9e9;margin:0;padding:0;">
 
     <style>
         .defaultTable{
@@ -34,10 +34,14 @@
              font-size: medium;
         }
 
-        
+        .defaultSideCol{
+            background-color: rgba(0, 0, 0, 0.2);
+            font-size: large;
+            font-weight: bolder;
+        }
     </style>
 
-
+<div class="mainPage">
     <div class="mainHeader">
         LearnerX / Application Structure
     </div>
@@ -52,6 +56,7 @@
 
     </div>
 
+</div>
     <script type="module">
 
         import {ScriptStructure} from "../scripts/Structure.js";
@@ -85,13 +90,20 @@
 
     if (selected) {
         let Tab=new Table(document.getElementById('tableContainer'));
-        Tab.createWithArray(objJson[selected]);
+        Tab.createWithArray(objJson[selected],true);
         Tab.appendTable();
     }
 
+     
     
 
 }
+
+
+
+ 
+ 
+
         
     </script>
 
